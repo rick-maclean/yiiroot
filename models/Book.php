@@ -12,8 +12,10 @@ use Yii;
  * @property string $description
  * @property integer $author_id
  * 
- * @property Author $author
  */
+
+// @property Author $author
+
 class Book extends \yii\db\ActiveRecord
 {
     /**
@@ -53,8 +55,9 @@ class Book extends \yii\db\ActiveRecord
     /*
      * @return \yii\db\ActiveQuery
      */
-    public function getAuthor()
+    /*public function getAuthor()
     {
         return $this->hasOne(Author::className(), ['id' => 'author_id']);
     }
+     */
 }
