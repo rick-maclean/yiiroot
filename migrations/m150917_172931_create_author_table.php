@@ -9,9 +9,9 @@ class m150917_172931_create_author_table extends Migration
     {
         $this->createTable('{{author}}', [
             'id' => Schema::TYPE_PK,
-            'firstname' => Schema::TYPE_STRING . " NOT NULL",
-            'sirname' => Schema::TYPE_STRING . " NOT NULL",
-            'biography' => Schema::TYPE_STRING . " NOT NULL",     
+            'firstname' =>  "varchar(32) NOT NULL",
+            'sirname' => "varchar(64) NOT NULL",
+            'biography' => "varchar(2048) NOT NULL",     
         ]);
     }
 

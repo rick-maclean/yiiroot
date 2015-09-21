@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "{{%author}}".
+ * This is the model class for table "author".
  *
  * @property integer $id
  * @property string $firstname
@@ -19,7 +19,7 @@ class Author extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%author}}';
+        return 'author';
     }
 
     /**
@@ -28,7 +28,7 @@ class Author extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['firstname', 'sirname'], 'required'],
+            [['firstname', 'sirname', 'biography'], 'required'],
             [['firstname'], 'string', 'max' => 32],
             [['sirname'], 'string', 'max' => 64],
             [['biography'], 'string', 'max' => 2048]

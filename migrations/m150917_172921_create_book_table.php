@@ -10,7 +10,7 @@ class m150917_172921_create_book_table extends Migration
         $this->createTable('{{book}}', [
             'id' => Schema::TYPE_PK,
             'title' => Schema::TYPE_STRING . " NOT NULL",
-            'description' => Schema::TYPE_STRING . " NOT NULL",
+            'description' => "varchar(1024) NOT NULL",
             'author_id'=> Schema::TYPE_INTEGER,        
         ]);
     }
